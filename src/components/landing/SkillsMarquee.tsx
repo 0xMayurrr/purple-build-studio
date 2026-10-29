@@ -32,11 +32,11 @@ function buildRow(offset: number): Tile[] {
   for (let i = 0; i < images.length; i++) {
     tiles.push({
       kind: "image",
-      src: images[(i + offset) % images.length] ?? images[0],
+      src: images[(i + offset) % images.length] as string,
     });
     tiles.push({
       kind: "text",
-      label: skills[(i + offset) % skills.length] ?? skills[0],
+      label: skills[(i + offset) % skills.length] as string,
     });
   }
   return tiles;
