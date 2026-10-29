@@ -30,8 +30,14 @@ type Tile = { kind: "image"; src: string } | { kind: "text"; label: string };
 function buildRow(offset: number): Tile[] {
   const tiles: Tile[] = [];
   for (let i = 0; i < images.length; i++) {
-    tiles.push({ kind: "image", src: images[(i + offset) % images.length] });
-    tiles.push({ kind: "text", label: skills[(i + offset) % skills.length] });
+    tiles.push({
+      kind: "image",
+      src: images[(i + offset) % images.length] ?? images[0],
+    });
+    tiles.push({
+      kind: "text",
+      label: skills[(i + offset) % skills.length] ?? skills[0],
+    });
   }
   return tiles;
 }
