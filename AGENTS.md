@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+<!-- Buildicy site rules -->
+- The site is a single-page agency landing (src/routes/index.tsx + src/components/landing/*) with anchor nav (#work, #services, #contact). Keep new landing sections as components there, styled only with tokens in src/styles.css.
+
